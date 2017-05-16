@@ -166,8 +166,8 @@ http://www.mobileread.com/forums/showthread.php?t=28707
               <packageName>lrf</packageName>
               <!-- options
               <addClasspath>true</addClasspath>
-              <addExtensions/>
-              <classpathPrefix/>
+              <addExtensions />
+              <classpathPrefix />
               -->
             </manifest>
             <manifestEntries>
@@ -192,7 +192,7 @@ http://www.mobileread.com/forums/showthread.php?t=28707
       </plugin>
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.4.1</version>
+        <version>2.5.2</version>
         <configuration>
           <useReleaseProfile>true</useReleaseProfile>
           <releaseProfiles>release</releaseProfiles>
@@ -218,8 +218,8 @@ http://www.mobileread.com/forums/showthread.php?t=28707
               <packageName>lrf</packageName>
               <!-- options
               <addClasspath>true</addClasspath>
-              <addExtensions/>
-              <classpathPrefix/>
+              <addExtensions />
+              <classpathPrefix />
               -->
             </manifest>
             <manifestEntries>
