@@ -274,9 +274,9 @@ public class Utils {
 	
 	public static String toTOCText(String app) {
 		app=toUnhandText(app);
-		app=app.replace("í", "");
+		app=app.replace("‚Äô", "");
 		app=app.replace("'", "");
-		app=app.replace("ë", "");
+		app=app.replace("‚Äò", "");
 		app=app.replace("\"", "");
 		return app;
 	}
@@ -293,26 +293,26 @@ public class Utils {
 
 	public static String toUnhandText(String app) {
 		app=app.replace('\u000C', ' ');
-		app=app.replace("í", "'");
-		app=app.replace("ë", "'");
+		app=app.replace("‚Äô", "'");
+		app=app.replace("‚Äò", "'");
 		app=app.replace("\"", "'");
-		app=app.replace("ì", "'");
-		app=app.replace("î", "'");
-		app=app.replace("ó", "-");
-		app=app.replace("Ö", "...");
-		app=app.replace("∆", "AE");
-		app=app.replace("·", "a");
-		app=app.replace("È", "e");
-		app=app.replace("Ì", "i");
-		app=app.replace("Û", "o");
-		app=app.replace("˙", "u");
-		app=app.replace("¡", "A");
-		app=app.replace("…", "E");
-		app=app.replace("Õ", "I");
-		app=app.replace("”", "O");
-		app=app.replace("⁄", "U");
-		app=app.replace("Ò", "n");
-		app=app.replace("—", "N");
+		app=app.replace("‚Äú", "'");
+		app=app.replace("‚Äù", "'");
+		app=app.replace("‚Äî", "-");
+		app=app.replace("‚Ä¶", "...");
+		app=app.replace("√Ü", "AE");
+		app=app.replace("√°", "a");
+		app=app.replace("√©", "e");
+		app=app.replace("√≠", "i");
+		app=app.replace("√≥", "o");
+		app=app.replace("√∫", "u");
+		app=app.replace("√Å", "A");
+		app=app.replace("√â", "E");
+		app=app.replace("√ç", "I");
+		app=app.replace("√ì", "O");
+		app=app.replace("√ö", "U");
+		app=app.replace("√±", "n");
+		app=app.replace("√ë", "N");
 		app=app.replace("\t"," ");
 		app=app.replace("\n"," ");
 		byte n[]=app.getBytes();

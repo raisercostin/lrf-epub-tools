@@ -76,7 +76,7 @@ public class PDF2SVG {
 	            Document document = domImpl.createDocument(svgNS, "svg", null);
 	            // Create an instance of the SVG Generator.
 	            SVGHook svgGenerator = new SVGHook(document);
-	            // Tamaño de la pagina
+	            // TamaÃ±o de la pagina
 	            PageFormat pf=doc.getPageFormat(i);
 	            int pageWidth=(int)pf.getWidth();
 	            int pageHeight=(int)pf.getHeight();
@@ -90,7 +90,7 @@ public class PDF2SVG {
 		        Writer out = new OutputStreamWriter(baos, "UTF-8");
 		        svgGenerator.stream(out, useCSS);
 		        out.close();
-		        //Añadimos al epub la imagen y la pagina que la sostiene
+		        //AÃ±adimos al epub la imagen y la pagina que la sostiene
 		        epub.addBA("images/"+i+".svg", baos.toByteArray(), 5);
 		        epub.addPage(i,pageWidth,pageHeight);
 		        if(i%30==0)

@@ -159,7 +159,7 @@ public abstract class EPUBMetaData {
 	}
 	
 	/**
-	 * Añade una cadena al zip epub
+	 * AÃ±ade una cadena al zip epub
 	 * 
 	 * @param url
 	 * 		URL de la cadena dentro del archivo zip. Se le antepone OEBPS/ si es
@@ -177,13 +177,13 @@ public abstract class EPUBMetaData {
 	}
 
 	/**
-	 * Añade un archivo al zip epub
+	 * AÃ±ade un archivo al zip epub
 	 * 
 	 * @param url
 	 * 		URL del archivo dentro del zip. Se le antepone OEPBS/ si es
 	 * 		necesario
 	 * @param f
-	 * 		Fichero a añadir
+	 * 		Fichero a aÃ±adir
 	 * @param level
 	 * 		Nivel de compresion
 	 * @throws IOException
@@ -196,14 +196,14 @@ public abstract class EPUBMetaData {
 	}
 
 	/**
-	 * Añade el contenido de un byte[] al archivo zip epub
+	 * AÃ±ade el contenido de un byte[] al archivo zip epub
 	 * 
 	 * @param url
 	 * 		URL dentro del archivo ZIP. Sele antepone OEBPS/ si es necesario
 	 * @param buf
 	 * 		contenido del archivo
 	 * @param level
-	 * 		Nivel de compresión
+	 * 		Nivel de compresiÃ³n
 	 * @throws IOException
 	 */
 	public void addBA(String url, byte buf[], int level) throws IOException {
@@ -295,12 +295,11 @@ public abstract class EPUBMetaData {
 	}
 
 	/**
-	 * Añade un nodo al manifest del epub. Si spinned==true se añade al apartado
+	 * AÃ±ade un nodo al manifest del epub. Si spinned==true se aÃ±ade al apartado
 	 * spinned del ncx.
 	 * 
 	 * @param url
 	 * 		URL dentro del archivo
-	 * @param fnl
 	 * @param spinned
 	 * @throws IOException
 	 */

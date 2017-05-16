@@ -74,7 +74,6 @@ public class Tag implements Renderable, LRFSerial {
 	 * @param pos
 	 * 		Posicion en la lista del valor
 	 * @return
-	 * @throws Exception
 	 */
 	public int getValueAt(int pos) {
 		if (2 * pos < list.size())

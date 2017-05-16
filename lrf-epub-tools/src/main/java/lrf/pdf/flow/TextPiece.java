@@ -13,7 +13,7 @@ import org.apache.pdfbox.util.TextPosition;
 /**
  * Representa un texto en una posicion con una metrica determinada Debe guardar
  * informacion del estado de todos los estilos involucrados Mantiene informacion
- * de con quÈ otros textos est· unido por los puntos cardinales. En general se
+ * de con qu√© otros textos est√° unido por los puntos cardinales. En general se
  * desecharan los textos que no vayan unidos al menos a otro texto, para evitar
  * mostrar headers y footers.
  * 

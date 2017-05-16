@@ -116,7 +116,7 @@ public class MergePDFAndTOC {
 				if (j == 1) {
 					cb.localDestination(hij.getCanonicalName(),
 							new PdfDestination(PdfDestination.FIT));
-					System.out.println("\tAñadiendo " + hij.getCanonicalName());
+					System.out.println("\tAÃ±adiendo " + hij.getCanonicalName());
 				}
 				cb.addTemplate(page, 0, 0);
 			}

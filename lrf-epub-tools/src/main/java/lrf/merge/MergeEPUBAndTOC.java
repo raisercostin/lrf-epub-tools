@@ -25,7 +25,7 @@ public class MergeEPUBAndTOC extends EPUBMetaData{
 		EPUBDoc doc=EPUBDoc.load(eBook);
 		ZipInputStream zis=new ZipInputStream(new FileInputStream(eBook));
 		ZipEntry ze;
-		//Se añaden todos los contenidos
+		//Se aÃ±aden todos los contenidos
 		String opfDir=doc.getOPFDir();
 		Hashtable<String, XMLNode> forSpinning=new Hashtable<String, XMLNode>();
 		while((ze=zis.getNextEntry())!=null){
@@ -62,7 +62,7 @@ public class MergeEPUBAndTOC extends EPUBMetaData{
 					""+currentBookNumber+"/"+doc.firstDoc(), 
 					getNavMap());
 		}
-		//Y debajo de el añadimos el propio TOC del Book
+		//Y debajo de el aÃ±adimos el propio TOC del Book
 		doc.setNavPoint(this, ""+currentBookNumber+"/",book);
 	}
 

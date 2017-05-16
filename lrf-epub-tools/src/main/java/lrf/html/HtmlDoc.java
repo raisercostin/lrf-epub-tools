@@ -227,7 +227,7 @@ public class HtmlDoc implements EPUBEntity{
 				   !spanActual.contains("center") &&
 				   !spanAnteriorEOP &&
 				   !BaseRenderer.isBeginOfParagraph(base)){
-					//No hay cambio de formato y no parece que se terminase el p·rrafo
+					//No hay cambio de formato y no parece que se terminase el p√°rrafo
 					String oldText=emits.elementAt(spanAnteriorNdx);
 					emits.set(spanAnteriorNdx, oldText+catpar+base);
 					emits.set(i, "");

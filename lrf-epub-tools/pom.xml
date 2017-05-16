@@ -243,7 +243,6 @@ http://www.mobileread.com/forums/showthread.php?t=28707
         <id>release</id>
         <build>
             <plugins>
-				<!--
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
@@ -253,7 +252,7 @@ http://www.mobileread.com/forums/showthread.php?t=28707
 					  <show>public</show>
 					  <additionalparam>-Xdoclint:all -Xdoclint:-missing</additionalparam>
 					  <links>
-              <link>http://docs.oracle.com/javase/7/docs/api/</link>
+						<link>http://docs.oracle.com/javase/7/docs/api/</link>
 					  </links>
 					</configuration>
                     <executions>
@@ -265,7 +264,6 @@ http://www.mobileread.com/forums/showthread.php?t=28707
                         </execution>
                     </executions>
                 </plugin>
-				-->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
