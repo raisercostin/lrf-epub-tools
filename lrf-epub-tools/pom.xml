@@ -1,10 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>9</version>
+  </parent>
+
   <groupId>com.gmail.elinares</groupId>
   <artifactId>LRFTools</artifactId>
   <packaging>jar</packaging>
-  <version>0.9.214</version>
+  <version>0.9.215-SNAPSHOT</version>
+
+
   <name>LRFTools</name>
   <description>LRFTools. Convert LRF to EPUB, HTML, PDF and RTF
 Another tool, credits to scotty1024 (LRFParse.java), Bruno Lowagie (iText) and people at apache jakarta project, xHTMLRenderer project and others right now I cannot remember.
@@ -22,8 +30,66 @@ Download:
 http://code.google.com/p/lrf-epub-tools/downloads/list
 
 ChangeLog:
-http://code.google.com/p/lrf-epub-tools/updates/list</description>
-  <url>http://www.mobileread.com/forums/showthread.php?t=28707</url>
+http://code.google.com/p/lrf-epub-tools/updates/list
+
+Forum:
+http://www.mobileread.com/forums/showthread.php?t=28707
+</description>
+  <url>https://github.com/raisercostin/lrf-epub-tools</url>
+  <issueManagement>
+    <url>https://github.com/raisercostin/lrf-epub-tools/issues</url>
+  </issueManagement>
+  <repositories>
+    <repository>
+      <id>jcenter-bintray</id>
+      <name>Bintray JCenter Maven Repository</name>
+      <layout>default</layout>
+      <url>https://jcenter.bintray.com/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>raisercostin-bintray</id>
+      <layout>default</layout>
+      <url>https://dl.bintray.com/raisercostin/maven/</url>
+      <releases><enabled>true</enabled></releases>
+      <snapshots><enabled>false</enabled></snapshots>
+    </repository>
+  </repositories>
+  <scm>
+    <connection>scm:git:${github.url}.git</connection>
+    <developerConnection>scm:git:${github.url}.git</developerConnection>
+    <url>${github.url}</url>
+    <tag>${project.artifactId}-${project.version}</tag>
+  </scm>
+  <distributionManagement>
+    <repository>
+      <id>bintray</id>
+      <url>https://api.bintray.com/maven/${bintray.user}/${bintray.repo}/${bintray.package}/;publish=0</url>
+    </repository>
+  </distributionManagement>
+
+  <prerequisites>
+    <maven>3.3.0</maven>
+  </prerequisites>
+
+  <properties>
+    <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	-->
+    <createChecksum>false</createChecksum>
+    <!--<github.user>threerings</github.user>-->
+    <github.user>raisercostin</github.user>
+    <github.repo>lrf-epub-tools</github.repo>
+    <github.url>https://github.com/${github.user}/${github.repo}</github.url>
+    <bintray.user>raisercostin</bintray.user>
+    <bintray.repo>maven</bintray.repo>
+    <bintray.package>${github.repo}</bintray.package>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>xerces</groupId>
@@ -112,7 +178,7 @@ http://code.google.com/p/lrf-epub-tools/updates/list</description>
             </manifest>
             <manifestEntries>
               <mode>development</mode>
-              <url>${pom.url}</url>
+              <url>${project.url}</url>
             </manifestEntries>
             <!-- <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>  -->
           </archive>
@@ -129,6 +195,15 @@ http://code.google.com/p/lrf-epub-tools/updates/list</description>
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.4.1</version>
+        <configuration>
+          <useReleaseProfile>true</useReleaseProfile>
+          <releaseProfiles>release</releaseProfiles>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -163,4 +238,48 @@ http://code.google.com/p/lrf-epub-tools/updates/list</description>
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+        <id>release</id>
+        <build>
+            <plugins>
+				<!--
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+					<version>2.10.3</version>
+					<configuration>
+					  <quiet>true</quiet>
+					  <show>public</show>
+					  <additionalparam>-Xdoclint:all -Xdoclint:-missing</additionalparam>
+					  <links>
+              <link>http://docs.oracle.com/javase/7/docs/api/</link>
+					  </links>
+					</configuration>
+                    <executions>
+                        <execution>
+                            <id>attach-javadocs</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+				-->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>attach-sources</id>
+                            <goals>
+                                <goal>jar</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+    </profile>
+  </profiles>
 </project>
