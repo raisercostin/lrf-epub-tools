@@ -1,11 +1,10 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.gmail.elinares</groupId>
   <artifactId>LRFTools</artifactId>
   <packaging>jar</packaging>
-  <version>0.9.215-SNAPSHOT</version>
+  <version>0.9.215</version>
 
 
   <name>LRFTools</name>
@@ -59,7 +58,7 @@ http://www.mobileread.com/forums/showthread.php?t=28707
     <connection>scm:git:${github.url}.git</connection>
     <developerConnection>scm:git:${github.url}.git</developerConnection>
     <url>${github.url}</url>
-    <tag>${project.artifactId}-${project.version}</tag>
+    <tag>LRFTools-0.9.215</tag>
   </scm>
   <distributionManagement>
     <repository>
