@@ -86,6 +86,11 @@ http://code.google.com/p/lrf-epub-tools/updates/list</description>
       <artifactId>batik-svg-dom</artifactId>
       <version>1.7</version>
     </dependency>
+    <dependency>
+      <groupId>net.java.dev.appframework</groupId>
+      <artifactId>appframework</artifactId>
+      <version>1.03</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
