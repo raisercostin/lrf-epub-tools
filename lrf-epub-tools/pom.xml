@@ -4,7 +4,7 @@
   <groupId>com.gmail.elinares</groupId>
   <artifactId>LRFTools</artifactId>
   <packaging>jar</packaging>
-  <version>0.9.215</version>
+  <version>0.9.216-SNAPSHOT</version>
 
 
   <name>LRFTools</name>
@@ -58,7 +58,7 @@ http://www.mobileread.com/forums/showthread.php?t=28707
     <connection>scm:git:${github.url}.git</connection>
     <developerConnection>scm:git:${github.url}.git</developerConnection>
     <url>${github.url}</url>
-    <tag>LRFTools-0.9.215</tag>
+    <tag>${project.artifactId}-${project.version}</tag>
   </scm>
   <distributionManagement>
     <repository>
